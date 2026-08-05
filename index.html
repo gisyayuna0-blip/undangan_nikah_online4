@@ -546,6 +546,14 @@ function showToast(msg){
   t.classList.add('show');
   setTimeout(function(){ t.classList.remove('show'); }, 2500);
 }
+  document.addEventListener("click", function () {
+    if (!musicPlaying) {
+        audio.play();
+        musicPlaying = true;
+        musicBtn.classList.remove("paused");
+        musicBtn.classList.add("playing");
+    }
+}, { once: true });
 </script>
 </body>
 </html>

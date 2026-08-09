@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://gisyayuna0-blip.github.io/undangan_nikah_online4/ilustrasi1.jpg">
     <title>Royal Invitation — Admin Panel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -518,7 +519,7 @@
                 <div class="stat-icon"><i class="fas fa-link"></i></div>
                 <div>
                     <div class="stat-val" id="statLink" style="font-size:13px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:150px;">undangan.me/</div>
-                    <div class="stat-lbl">Link Undangan</div>
+                    <div class="stat-lbl">link undangan </div>
                 </div>
             </div>
             <div class="stat-chip fi">
@@ -885,7 +886,9 @@ function copyIndividual(name) {
 
 function buildLink() {
     const slug = $('fSlug').value.trim().replace(/\s+/g, '-').toLowerCase();
+    
     const link = 'undangan.me/' + (slug || '');
+    
     $('linkOut').textContent = link;
     return link;
 }

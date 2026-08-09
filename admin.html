@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta property="og:image" content="https://gisyayuna0-blip.github.io/undangan_nikah_online4//ilustrasi1.jpg">
     <title>Royal Invitation — Admin Panel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -884,10 +883,9 @@ function copyIndividual(name) {
     toast('Pesan untuk ' + name + ' disalin', 'ok');
 }
 
-function getFullLink() {
+function buildLink() {
     const slug = $('fSlug').value.trim().replace(/\s+/g, '-').toLowerCase();
-    return 'https://gisyayuna0-blip.github.io/undangan_nikah_online4/' + (slug ? '?to=' + encodeURIComponent(slug) : '');
-}
+    const link = 'undangan.me/' + (slug || '');
     $('linkOut').textContent = link;
     return link;
 }
